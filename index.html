@@ -2,36 +2,51 @@
 <html>
 <head>
 	<title>Hoşgeldiniz</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<style>
-		body {
-			margin: 0;
-			padding: 0;
-		}
 		.section {
 			height: 100vh;
 			display: flex;
-			flex-direction: column;
-			align-items: center;
 			justify-content: center;
-			font-size: 5rem;
-			color: white;
-			text-shadow: 2px 2px 4px #000000;
+			align-items: center;
+			font-size: 4rem;
+			font-weight: bold;
+			color: #fff;
+			text-shadow: 2px 2px 2px #000;
 		}
+
 		#hoşgeldiniz {
 			background-color: blue;
 		}
+
 		#nasılçalışır {
 			background-color: green;
 		}
+
 		#fotoğraflar {
 			background-color: red;
 		}
+
 	</style>
+	<script>
+		function scrollToBottom() {
+			const element = document.querySelector("body");
+			element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+		}
+	</script>
 </head>
 <body>
-	<div id="hoşgeldiniz" class="section">Hoşgeldiniz</div>
-	<div id="nasılçalışır" class="section">Nasıl Çalışır</div>
-	<div id="fotoğraflar" class="section">Fotoğraflar</div>
+	<div id="hoşgeldiniz" class="section">
+		Hoşgeldiniz
+		<button onclick="scrollToBottom()">Sayfanın Sonuna Git</button>
+	</div>
+
+	<div id="nasılçalışır" class="section">
+		Nasıl Çalışır
+	</div>
+
+	<div id="fotoğraflar" class="section">
+		Fotoğraflar
+	</div>
 </body>
 </html>
-
