@@ -1,35 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Kaydırma Hareketini Engellemek</title>
-    <style>
-      #content {
-        overflow-y: scroll;
-        height: 300px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="content">
-      <h1>Hoşgeldiniz</h1>
-      <p>Bu bir test sayfasıdır.</p>
-      <p>Bu sayfada, kaydırma hareketini engelleyebilirsiniz.</p>
-      <p>JavaScript kullanarak, sayfa içeriği sabit kalacak.</p>
-    </div>
-    <button onclick="toggleMinimize()">Minimize Adres Çubuğu</button>
-    <script>
-      function toggleMinimize() {
-        window.scrollTo(0, 0);
-        setTimeout(function() {
-          window.scrollTo(0, 1);
-        }, 0);
-      }
-
-      var content = document.getElementById("content");
-      content.addEventListener("touchmove", function(event) {
-        event.preventDefault();
-      }, {passive: false});
-    </script>
-  </body>
+<head>
+	<title>Kaydırılabilir Sayfa</title>
+	<style>
+		body {
+			overflow-y: scroll; /* Sayfa içeriği boyutundan büyük olduğunda kaydırma çubuğunu göster */
+			height: 100vh; /* Sayfanın tam boyunu kullan */
+		}
+		.container {
+			height: 200vh; /* İçerik boyutunu ayarla, burada 2 kat sayfa boyutunu kullandık */
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<!-- Burada sayfa içeriğini oluşturabilirsiniz -->
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mauris in nunc varius aliquam. Sed laoreet consequat quam at varius. Integer volutpat lacus a diam dictum consectetur. Duis in pharetra turpis. Nullam sed orci tellus. Quisque vel ligula volutpat, rhoncus enim vitae, tincidunt lorem. Fusce viverra ullamcorper mauris, nec rutrum ex aliquet id. Nam ultrices erat id ex commodo malesuada. Aenean nec sodales libero, eu pharetra magna. Integer ac nulla vehicula, vehicula enim a, dictum quam. Donec in commodo risus. Nullam aliquet tincidunt tortor, at commodo risus commodo eu.</p>
+	</div>
+</body>
 </html>
+
