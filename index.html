@@ -1,53 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Hoşgeldiniz</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<style>
-		.section {
-			height: 100vh;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: 4rem;
-			font-weight: bold;
-			color: #fff;
-			text-shadow: 2px 2px 2px #000;
-		}
+  <head>
+    <meta charset="UTF-8">
+    <title>Kaydırma Hareketini Engellemek</title>
+    <style>
+      #content {
+        overflow-y: scroll;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <h1>Hoşgeldiniz</h1>
+      <p>Bu bir test sayfasıdır.</p>
+      <p>Bu sayfada, kaydırma hareketini engelleyebilirsiniz.</p>
+      <p>JavaScript kullanarak, sayfa içeriği sabit kalacak.</p>
+    </div>
+    <button onclick="toggleMinimize()">Minimize Adres Çubuğu</button>
+    <script>
+      function toggleMinimize() {
+        window.scrollTo(0, 0);
+        setTimeout(function() {
+          window.scrollTo(0, 1);
+        }, 0);
+      }
 
-		#hoşgeldiniz {
-			background-color: blue;
-		}
-
-		#nasılçalışır {
-			background-color: green;
-		}
-
-		#fotoğraflar {
-			background-color: red;
-		}
-
-	</style>
-	<script>
-		function scrollToBottom() {
-			const element = document.querySelector("body");
-			element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-		}
-	</script>
-</head>
-<body>
-	<div id="hoşgeldiniz" class="section">
-		Hoşgeldiniz
-		<button onclick="scrollToBottom()">Sayfanın Sonuna Git</button>
-	</div>
-
-	<div id="nasılçalışır" class="section">
-		Nasıl Çalışır
-	</div>
-
-	<div id="fotoğraflar" class="section">
-		Fotoğraflar
-	</div>
-</body>
+      var content = document.getElementById("content");
+      content.addEventListener("touchmove", function(event) {
+        event.preventDefault();
+      }, {passive: false});
+    </script>
+  </body>
 </html>
