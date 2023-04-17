@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Sayfa</title>
-	<style>
-		body {
-			overflow-y: scroll; /* Sayfa içeriği boyutundan büyük olduğunda kaydırma çubuğunu göster */
-			height: 100vh; /* Sayfanın tam boyunu kullan */
-		}
-		.container {
-			height: 200vh; /* İçerik boyutunu ayarla, burada 2 kat sayfa boyutunu kullandık */
-		}
-	</style>
-</head>
-<body>
-	<div class="container">
-		<!-- Burada sayfa içeriğini oluşturabilirsiniz -->
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mauris in nunc varius aliquam. Sed laoreet consequat quam at varius. Integer volutpat lacus a diam dictum consectetur. Duis in pharetra turpis. Nullam sed orci tellus. Quisque vel ligula volutpat, rhoncus enim vitae, tincidunt lorem. Fusce viverra ullamcorper mauris, nec rutrum ex aliquet id. Nam ultrices erat id ex commodo malesuada. Aenean nec sodales libero, eu pharetra magna. Integer ac nulla vehicula, vehicula enim a, dictum quam. Donec in commodo risus. Nullam aliquet tincidunt tortor, at commodo risus commodo eu.</p>
-	</div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ekran Boyutundan Bir Piksel Daha Büyük Sayfa</title>
+    <style>
+    body {
+    	margin: 0;
+        padding: 0;
+    }
+      
+    #container {
+		width: calc(100% + 1px);
+		height: calc(100% + 1px);
+		background-color: lightblue;
+		position: absolute;
+	}
+      
+    h1 {
+        text-align: center;
+        padding-top: 50px;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Ekran Boyutundan Bir PikSADASDASDsel Daha Büyük Sayfa</h1>
+    </div>
+  </body>
 </html>
 
